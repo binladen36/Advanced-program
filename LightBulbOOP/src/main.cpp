@@ -21,4 +21,7 @@ int main()
 	{
 		cout << "It's so dark in here" << endl;
 	}
+
+	lightBulb bedroomBulb(OFF);
+	bedroomBulb.show();
 }

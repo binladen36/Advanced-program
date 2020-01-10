@@ -3,24 +3,36 @@
 using namespace std;
 //implementation for lightBulb class
 
+lightBulb::lightBulb()
+{
+    light = ON;
+    cout << "Default bulb is created with light on" << endl;
+}
+
+lightBulb::lightBulb(bool light)
+{
+    this->light = light;
+    cout << "Custom bulb is created" << endl;
+}
+
 void lightBulb::turnOn()
 {
-    light = true;
+    light = ON;
 } 
 
 void lightBulb::turnOff()
 {
-    light = false;
+    light = OFF;
 }
 
 bool lightBulb::isOn()
 {
-    return light == true;
+    return light == ON;
 }
 
 void lightBulb::show()
 {
-    if (light == true) cout << "Light is on" << endl;
+    if (light == ON) cout << "Light is on" << endl;
     else
     {
         cout << "Light is off" << endl;
